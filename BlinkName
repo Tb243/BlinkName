@@ -1,0 +1,57 @@
+// ------------
+// Blinkname
+// ------------
+
+
+
+int led = D7; //onboard LED
+
+void setup() {
+
+  
+  pinMode(led, OUTPUT);
+
+}
+
+
+void loop() {
+
+  //morse code
+  //1 time unit is delay of 100 therefore:
+  //dash is 300
+  //dot is 100
+  //next character 300
+  //space between words 700
+  // Reference for above - https://morsecode.world/international/timing.html
+  
+  // T
+  digitalWrite(led, HIGH);
+  delay(300);
+  digitalWrite(led, LOW);
+  delay(300);
+  
+  // O
+  digitalWrite(led, HIGH);
+  delay(300);
+  digitalWrite(led, LOW);
+  delay(100);
+  digitalWrite(led, HIGH);
+  delay(300);
+  digitalWrite(led, LOW);
+  delay(100);
+  digitalWrite(led, HIGH);
+  delay(300);
+  digitalWrite(led, LOW);
+  delay(300);
+  
+  // M
+  digitalWrite(led, HIGH);
+  delay(300);
+  digitalWrite(led, LOW);
+  delay(100);
+  digitalWrite(led, HIGH);
+  delay(300);
+  digitalWrite(led, LOW);
+  delay(700);
+  
+}
